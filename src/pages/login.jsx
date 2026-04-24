@@ -133,8 +133,8 @@ export default function Login() {
               </Link>
             </div>
 
-            <button className="btn-login" onClick={handleSubmit} disabled={loading}>
-              {loading ? 'Ingresando...' : 'Ingresar →'}
+            <button className="btn-red login-submit-btn" onClick={handleSubmit} disabled={loading}>
+              {loading ? 'Ingresando...' : 'INGRESAR →'}
             </button>
 
             <div className="register-link">
