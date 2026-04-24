@@ -1,13 +1,22 @@
-import NavbarDashboard from '../components/navbarDashboard';
+import Navbar from '../components/navbar';
 import '../assets/css/panel.css';
 
 export default function Simulador() {
   return (
     <div className="sim-page">
-      <NavbarDashboard />
+      <Navbar />
 
       <main className="sim-layout">
         <section className="sim-terminal-panel">
+          <div className="sim-panel-header">
+            <span className="sim-badge">Terminal de práctica</span>
+            <h1>Simulador GDS / SABRE</h1>
+            <p>
+              Practica comandos de disponibilidad, selección de vuelo y creación
+              básica de reservas en un entorno de entrenamiento.
+            </p>
+          </div>
+
           <div className="sim-terminal-window">
             <div className="sim-terminal-header">
               <div className="sim-terminal-left">
@@ -15,7 +24,12 @@ export default function Simulador() {
                 <span className="sim-dot yellow"></span>
                 <span className="sim-dot green"></span>
               </div>
-              <div className="sim-terminal-title">AeroSim Pro — Terminal GDS / SABRE</div>
+
+              <div className="sim-terminal-title">
+                AeroSim Pro — Training Terminal
+              </div>
+
+              <span className="sim-terminal-mode">ACTIVE</span>
             </div>
 
             <div className="sim-terminal-body">
@@ -64,34 +78,60 @@ export default function Simulador() {
 
         <aside className="sim-side-panel">
           <div className="sim-card">
+            <span className="sim-card-tag">Objetivo</span>
             <h3>Objetivo de la práctica</h3>
             <p>
-              Simular una búsqueda de disponibilidad, selección de vuelo
-              y creación inicial de una reserva aérea en entorno de entrenamiento.
+              Simular una búsqueda de disponibilidad, seleccionar un vuelo
+              y crear los primeros datos de una reserva aérea.
             </p>
           </div>
 
           <div className="sim-card">
+            <span className="sim-card-tag">Ayuda rápida</span>
             <h3>Comandos rápidos</h3>
+
             <ul className="sim-help-list">
-              <li><strong>1 15MAY SCL MIA</strong> — Disponibilidad</li>
-              <li><strong>01Y1</strong> — Selección de vuelo</li>
-              <li><strong>NM1APELLIDO/NOMBRE</strong> — Nombre</li>
-              <li><strong>AP 998877665</strong> — Teléfono</li>
-              <li><strong>ER</strong> — Guardar registro</li>
+              <li>
+                <strong>1 15MAY SCL MIA</strong>
+                <span>Disponibilidad de vuelos</span>
+              </li>
+
+              <li>
+                <strong>01Y1</strong>
+                <span>Selección de vuelo</span>
+              </li>
+
+              <li>
+                <strong>NM1APELLIDO/NOMBRE</strong>
+                <span>Ingreso de pasajero</span>
+              </li>
+
+              <li>
+                <strong>AP 998877665</strong>
+                <span>Ingreso de teléfono</span>
+              </li>
+
+              <li>
+                <strong>ER</strong>
+                <span>Guardar registro</span>
+              </li>
             </ul>
           </div>
 
           <div className="sim-card">
-            <h3>Estado</h3>
+            <span className="sim-card-tag">Estado</span>
+            <h3>Estado del módulo</h3>
+
             <div className="sim-status-row">
               <span>Modo</span>
               <strong>Entrenamiento</strong>
             </div>
+
             <div className="sim-status-row">
               <span>Módulo</span>
               <strong>Reservas Aéreas</strong>
             </div>
+
             <div className="sim-status-row">
               <span>Terminal</span>
               <strong>Disponible</strong>
