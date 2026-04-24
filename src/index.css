@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap');
+ 
+:root {
+  --navy:      #07103a;
+  --navy-mid:  #0d1b4b;
+  --navy-dark: #060e30;
+  --red:       #d31f2e;
+  --red-hover: #b81828;
+  --cyan:      #00b4ff;
+  --gold:      #f5a623;
+  --white:     #ffffff;
+  --gray-lt:   #c8d0e0;
+  --gray:      #8897b8;
+  --border:    rgba(255,255,255,0.1);
+  --radius:    8px;
+  --font-head: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+}
+ 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--white);
+  min-height: 100vh;
+}
+ 
+a { color: inherit; text-decoration: none; }
+ 
+input, button { font-family: var(--font-body); }
+ 
+/* ─── Shared buttons ─── */
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 28px;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+.btn-red:hover { background: var(--red-hover); transform: translateY(-1px); }
+ 
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 22px;
+  font-family: var(--font-head);
+  font-size: .9rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
+ 
+/* ─── Badge label ─── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-family: var(--font-head);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+ 
+/* ─── Form shared ─── */
+.field-group { display: flex; flex-direction: column; gap: 6px; }
+.field-label {
+  font-family: var(--font-head);
+  font-size: .72rem;
+  letter-spacing: .1em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+.field-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #dde3ee;
+  border-radius: var(--radius);
+  font-size: .95rem;
+  color: #1a2040;
+  background: #fff;
+  transition: border-color .2s;
+  outline: none;
+}
+.field-input:focus { border-color: var(--cyan); }
+.field-input.error { border-color: var(--red); }
+.field-error { font-size: .78rem; color: var(--red); margin-top: 2px; }

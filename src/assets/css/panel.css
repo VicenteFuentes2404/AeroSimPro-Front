@@ -1,0 +1,215 @@
+.sim-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(45, 74, 180, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(215, 38, 56, 0.14), transparent 24%),
+    #08122f;
+}
+
+.sim-layout {
+  min-height: calc(100vh - 84px);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 28px;
+}
+
+.sim-terminal-panel {
+  display: flex;
+}
+
+.sim-terminal-window {
+  width: 100%;
+  background: #07101f;
+  border: 1px solid rgba(120, 150, 255, 0.16);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+}
+
+.sim-terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d1833;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 18px;
+}
+
+.sim-terminal-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sim-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sim-dot.red { background: #ff5f57; }
+.sim-dot.yellow { background: #febc2e; }
+.sim-dot.green { background: #28c840; }
+
+.sim-terminal-title {
+  color: #d9e2ff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+}
+
+.sim-terminal-body {
+  flex: 1;
+  padding: 24px;
+  font-family: 'Courier New', monospace;
+  color: #d6e2ff;
+  background:
+    linear-gradient(rgba(6, 13, 29, 0.94), rgba(6, 13, 29, 0.96)),
+    #050b17;
+  overflow-y: auto;
+}
+
+.sim-line {
+  margin-bottom: 10px;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.sim-welcome {
+  color: #67d3ff;
+  font-weight: 700;
+}
+
+.sim-system {
+  color: #7e91bf;
+}
+
+.sim-command {
+  color: #ff6a7a;
+  font-weight: 700;
+}
+
+.sim-result {
+  color: #dce7ff;
+}
+
+.sim-terminal-inputbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #0a152d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sim-prompt {
+  color: #ff4d61;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.sim-terminal-inputbar input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #dce7ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.sim-terminal-inputbar input::placeholder {
+  color: #8190b5;
+}
+
+.sim-side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sim-card {
+  background: rgba(10, 22, 51, 0.94);
+  border: 1px solid rgba(120, 150, 255, 0.14);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+.sim-card h3 {
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.6px;
+}
+
+.sim-card p {
+  margin: 0;
+  color: #b7c3e3;
+  line-height: 1.6;
+}
+
+.sim-help-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #c9d4ee;
+}
+
+.sim-help-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.sim-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  color: #c8d4ef;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sim-status-row:last-child {
+  border-bottom: none;
+}
+
+.sim-status-row strong {
+  color: #67d3ff;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .sim-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-terminal-window {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sim-layout {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .sim-terminal-title {
+    font-size: 0.9rem;
+  }
+
+  .sim-terminal-body {
+    padding: 18px;
+    font-size: 0.92rem;
+  }
+}
