@@ -18,7 +18,7 @@
   animation: fadeUp .6s ease both;
 }
 
-/* ── Header ── */
+
 .reg-header {
   background: var(--navy-mid);
   padding: 40px 48px 32px;
@@ -38,7 +38,7 @@
   margin-bottom: 28px;
 }
 
-/* ── Stepper ── */
+
 .stepper {
   display: flex;
   align-items: center;
@@ -91,7 +91,6 @@
 }
 .step-line.done { background: var(--cyan); }
 
-/* ── Body ── */
 .reg-body {
   background: #fff;
   padding: 40px 48px;
@@ -103,7 +102,7 @@
   gap: 20px 24px;
 }
 
-/* ── Strength bar ── */
+
 .strength-bar {
   display: flex;
   gap: 4px;
@@ -116,7 +115,7 @@
   transition: background .3s;
 }
 
-/* ── Footer ── */
+
 .reg-footer {
   display: flex;
   align-items: center;
@@ -133,7 +132,7 @@
 }
 .back-link:hover { color: var(--navy); }
 
-/* ── Verify screen ── */
+
 .verify-screen {
   display: flex;
   flex-direction: column;

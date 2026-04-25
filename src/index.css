@@ -30,7 +30,6 @@ a { color: inherit; text-decoration: none; }
  
 input, button { font-family: var(--font-body); }
  
-/* ─── Shared buttons ─── */
 .btn-red {
   display: inline-flex;
   align-items: center;
@@ -64,8 +63,7 @@ input, button { font-family: var(--font-body); }
   transition: border-color .2s;
 }
 .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
- 
-/* ─── Badge label ─── */
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -81,7 +79,6 @@ input, button { font-family: var(--font-body); }
   margin-bottom: 20px;
 }
  
-/* ─── Form shared ─── */
 .field-group { display: flex; flex-direction: column; gap: 6px; }
 .field-label {
   font-family: var(--font-head);
